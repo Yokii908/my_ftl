@@ -11,11 +11,8 @@
 #ifndef __MY_STRING_H__
 #define __MY_STRING_H__
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <string.h>
+#include "display.h"
 
-void	my_putchar(const char c);
 void	my_putstr(const char *str);
 void 	my_put_nbr(int n);
 char	*my_strcpy(const char *dest, const char *src);

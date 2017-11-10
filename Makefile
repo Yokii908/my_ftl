@@ -23,7 +23,8 @@ SRC	=	main.c			\
 		sector.c 		\
 		free.c 			\
 		attack.c 		\
-		detect.c
+		detect.c 		\
+		display.c
 OBJ	=	$(SRC:%.c=%.o)
 RM	=	rm -f
 
@@ -40,3 +41,5 @@ fclean:		clean
 			$(RM) *~
 
 re:			fclean all
+
+.PHONY	:	all clean fclean re

@@ -31,7 +31,7 @@ void start_game()
 	add_container_to_ship(ship);
 	jump_to_next_sector(ship);
 	while (ship->hull > 0 && ship->ftl_drive->energy > 0
-		&& ship->navigation_tools->sector < 5)
+		&& ship->navigation_tools->sector < 10)
 	{
 		ask_command(ship);
 	}
@@ -84,7 +84,8 @@ void check_for_victory(t_ship *ship)
 {
 	if (ship->hull <= 0)
 		my_putstr_color("red", "Your ship exploded.\n");
-	else if (ship->ftl_drive->energy <= 0 && ship->navigation_tools->sector != 10)
+	else if (ship->ftl_drive->energy <= 0
+		&& ship->navigation_tools->sector != 10)
 		my_putstr_color("red", "You have no energy left and are lost in space.\n");
 	else
 		my_putstr_color("green", "Congratulations ! You reached 10th sector !\n");

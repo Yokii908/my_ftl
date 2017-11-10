@@ -27,7 +27,8 @@ void detect(t_ship *ship)
 		i = 0;
 		while (i < 10)
 		{
-			add_freight_to_container(ship, ship->current_sector->sector_freights[i]);
+			t_freight *sector = ship->current_sector->sector_freights[i];
+			add_freight_to_container(ship, sector);
 			i++;
 		}
 		my_putstr_color("green", "10 freights have been found !\n");
